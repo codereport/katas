@@ -6,7 +6,7 @@ hasSomeoneWon ← {∨/{∧/('.'≠⊃⍵)∧⍵=⊃⍵}(⍤1)⍵[wins]}
 playTurn ← {
      ⎕←'Player ',⍵,'s Turn'
      ⎕←'Please enter row (1, 2, 3):' ⋄ row←⍎∘⍕⍞
-     ⎕←'Please enter row (1, 2, 3):' ⋄ col←⍎∘⍕⍞
+     ⎕←'Please enter col (1, 2, 3):' ⋄ col←⍎∘⍕⍞
      board[col+(row-1)×3]←⍵
      ⎕←printBoard board
      {hasSomeoneWon board: ⎕←'Player ',⍵,' Wins!' 
